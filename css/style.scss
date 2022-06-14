@@ -1,0 +1,129 @@
+* {margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	z-index: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:before {
+	box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #515151;
+    --text-color:#ffffff;
+}
+
+body {
+    background: var(--primary-color);
+    background-size: cover;
+    margin: 0px;
+    font-family: 'Sofia Pro', sans-serif;
+    overflow-x: hidden;
+    z-index: 0;    
+}
+
+#check {
+    display: none;
+}
+label {
+    display: none;
+}
+
+
+
+
+@media (max-width: 970px) {
+        
+    label {
+         display: flex;
+    }
+
+    label #btn, label #cancel {
+         position: absolute;
+         position: fixed;
+         cursor: pointer;
+         top: 1vh;
+         right: 1vw;
+         z-index: 50;
+         border: 0;
+         transition: all 0.5s ease-in-out;
+    }
+
+    label #btn {
+        color: #181717;
+        padding: 0.5vw;
+        font-size: 5vw;
+    }
+
+    label #cancel {
+        transform: translateX(1000%);
+        color: #cfcfcf;
+        font-size: 6vw;
+        padding: .5vw;
+        z-index: 9999;
+    }
+     .navbar {         
+         .nav {
+             width: auto;
+             position: fixed;
+             inset: 0 0 0 63%;
+             align-items: center;
+             justify-content: center;
+             padding: 4vw  0 0 0 ; 
+             flex-direction: column;
+             height: 100%;
+             background-color: rgba(0, 0, 0, 0.863);
+
+             transition: all 0.5s ease-in-out;
+
+             transform: translateX(100%);
+
+
+             li {
+                 display: flex;
+                 height: 15vh;
+                 align-items: center;
+                 justify-content: center;
+                 padding: 1vh 0 1vh 0;
+                 transition: 0s;
+             }
+
+             li:hover {
+                 
+                 background-color: rgba(0, 0, 0, 0.856);
+             }
+             a {
+                 font-size: 2vw;
+                 color: #ebebeb;
+                 width: 100%;
+
+                 &:hover{
+                     font-weight: bold;
+                 }
+             }
+
+             
+             
+         }
+
+
+
+     }
+
+     #check:checked ~ .navbar .nav {
+         transform: translateX(0);
+     }
+
+     #check:checked ~ label #btn {
+         opacity: 0;
+         pointer-events: none;
+     }
+
+     #check:checked ~ label #cancel {
+         transform: translateX(0%);
+     }

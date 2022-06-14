@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #515151;
+  --text-color:#ffffff;
+}
+
+body {
+  background: var(--primary-color);
+  background-size: cover;
+  margin: 0px;
+  font-family: 'Sofia Pro', sans-serif;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+#check {
+  display: none;
+}
+
+label {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
